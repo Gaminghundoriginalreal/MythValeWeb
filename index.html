@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MythVale - Minecraft Server</title>
+    <link rel="icon" href="icon.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e2f;
+            color: #ffffff;
+            display: flex;
+        }
+        header {
+            background-color: #29294d;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        header img {
+            height: 50px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        main {
+            padding: 100px 2rem 2rem 2rem;
+            flex-grow: 1;
+            max-width: 75%;
+        }
+        aside {
+            width: 25%;
+            background-color: #2f2f4f;
+            padding: 100px 1rem 1rem 1rem;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        .event {
+            background-color: #3b3b5e;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .event img {
+            max-width: 100%;
+            border-radius: 6px;
+        }
+        .event h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <img src="icon.png" alt="MythVale Logo">
+            <h1>MythVale</h1>
+        </div>
+        <div>
+            <p>IP: <strong>MythVale.eu</strong></p>
+        </div>
+    </header>
+    <main>
+        <h2>Welcome to MythVale!</h2>
+        <p>Explore a magical survival world with custom items, friendly community, and thrilling events. Join now using the IP <strong>MythVale.eu</strong>.</p>
+    </main>
+    <aside>
+        <h2>Events & Updates</h2>
+
+        <!-- Example Event Block -->
+        <div class="event">
+            <h2>Spring Festival</h2>
+            <img src="spring_event.jpg" alt="Spring Event">
+            <p>Celebrate the season with exclusive challenges and rewards! April 30th - May 7th.</p>
+        </div>
+
+        <!-- Add your own updates by copying the structure above -->
+    </aside>
+</body>
+</html>
