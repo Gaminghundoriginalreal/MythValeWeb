@@ -6,16 +6,27 @@
     <title>MythVale - Minecraft Server</title>
     <link rel="icon" href="icon.png" type="image/png">
     <style>
+        :root {
+            --bg-color: #2e1b4c;
+            --primary: #b083ff;
+            --secondary: #7e57c2;
+            --text-light: #f3e8ff;
+            --border-radius: 20px;
+            --season: "spring"; /* Change this to: spring, summer, autumn, halloween, christmas */
+        }
+
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1e1e2f;
-            color: #ffffff;
+            background-color: var(--bg-color);
+            color: var(--text-light);
             display: flex;
+            transition: all 0.3s ease;
         }
+
         header {
-            background-color: #29294d;
-            padding: 1rem;
+            background: linear-gradient(145deg, var(--primary), var(--secondary));
+            padding: 1rem 2rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -23,46 +34,104 @@
             position: fixed;
             top: 0;
             z-index: 1000;
+            border-bottom-left-radius: var(--border-radius);
+            border-bottom-right-radius: var(--border-radius);
         }
+
         header img {
             height: 50px;
+            border-radius: var(--border-radius);
         }
+
         header h1 {
             margin: 0;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
+
         main {
-            padding: 100px 2rem 2rem 2rem;
+            padding: 120px 2rem 2rem 2rem;
             flex-grow: 1;
             max-width: 75%;
         }
+
         aside {
             width: 25%;
-            background-color: #2f2f4f;
-            padding: 100px 1rem 1rem 1rem;
-            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+            background-color: #3b2a5e;
+            padding: 120px 1rem 1rem 1rem;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.4);
             position: fixed;
             right: 0;
             top: 0;
             height: 100vh;
             overflow-y: auto;
+            border-top-left-radius: var(--border-radius);
         }
+
         .event {
-            background-color: #3b3b5e;
+            background-color: #4a3673;
             padding: 1rem;
-            border-radius: 8px;
+            border-radius: var(--border-radius);
             margin-bottom: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
+
         .event img {
             max-width: 100%;
-            border-radius: 6px;
+            border-radius: 10px;
         }
+
         .event h2 {
             margin-top: 0;
         }
+
+        /* Seasonal effects */
+        body.spring::before {
+            content: "";
+            background-image: url('egg.png');
+            background-repeat: repeat;
+            background-size: 100px;
+            opacity: 0.1;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: fixed;
+            z-index: 0;
+        }
+
+        body.summer {
+            background-color: #ffe4b5;
+            color: #333;
+        }
+
+        body.autumn {
+            background-color: #5e3b2e;
+            color: #f8e3c3;
+        }
+
+        body.halloween {
+            background-color: #1c0f1a;
+            background-image: url('halloween_bg.png');
+            background-size: cover;
+            background-blend-mode: overlay;
+        }
+
+        body.christmas::before {
+            content: "";
+            background-image: url('snow_overlay.png');
+            background-repeat: repeat;
+            background-size: 120px;
+            opacity: 0.2;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: fixed;
+            z-index: 0;
+        }
     </style>
 </head>
-<body>
+<body class="spring"> <!-- Change class to summer, autumn, halloween, or christmas -->
     <header>
         <div style="display: flex; align-items: center; gap: 1rem;">
             <img src="icon.png" alt="MythVale Logo">
@@ -86,7 +155,7 @@
             <p>Celebrate the season with exclusive challenges and rewards! April 30th - May 7th.</p>
         </div>
 
-        <!-- Add your own updates by copying the structure above -->
+        <!-- Add more events here -->
     </aside>
 </body>
 </html>
