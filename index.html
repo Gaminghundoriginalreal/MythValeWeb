@@ -12,7 +12,7 @@
             --secondary: #7e57c2;
             --text-light: #f3e8ff;
             --border-radius: 20px;
-            --season: "spring"; /* Change this to: spring, summer, autumn, halloween, christmas */
+            --season: "spring";
         }
 
         body {
@@ -36,6 +36,7 @@
             z-index: 1000;
             border-bottom-left-radius: var(--border-radius);
             border-bottom-right-radius: var(--border-radius);
+            box-sizing: border-box;
         }
 
         header img {
@@ -46,6 +47,13 @@
         header h1 {
             margin: 0;
             font-size: 1.8rem;
+        }
+
+        header div:last-child {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 200px;
         }
 
         main {
@@ -84,7 +92,6 @@
             margin-top: 0;
         }
 
-        /* Seasonal effects */
         body.spring::before {
             content: "";
             background-image: url('egg.png');
@@ -131,15 +138,13 @@
         }
     </style>
 </head>
-<body class="spring"> <!-- Change class to summer, autumn, halloween, or christmas -->
+<body class="spring">
     <header>
         <div style="display: flex; align-items: center; gap: 1rem;">
             <img src="icon.png" alt="MythVale Logo">
             <h1>MythVale</h1>
         </div>
-        <div>
-            <p>IP: <strong>MythVale.eu</strong></p>
-        </div>
+        <div style="font-weight: bold; font-size: 1rem;">IP: MythVale.eu</div>
     </header>
     <main>
         <h2>Welcome to MythVale!</h2>
@@ -148,14 +153,12 @@
     <aside>
         <h2>Events & Updates</h2>
 
-        <!-- Example Event Block -->
         <div class="event">
             <h2>Spring Festival</h2>
             <img src="spring_event.jpg" alt="Spring Event">
             <p>Celebrate the season with exclusive challenges and rewards! April 30th - May 7th.</p>
         </div>
 
-        <!-- Add more events here -->
     </aside>
 </body>
 </html>
